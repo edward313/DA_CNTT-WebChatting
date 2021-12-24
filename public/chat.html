@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/86e0d2b19a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ứng dụng chat thời gian thực</title>
+</head>
+<body>
+    
+    <div class="infor-container">
+        
+
+        <div class="chat-header">
+            <div class="logo">
+                <i class="fab fa-facebook-messenger"></i>
+                <h3>Thông tin</h3>
+            </div>
+            
+        
+        </div>
+        
+        <div class="infor" style="margin: 10px;">
+            
+            <h3><i class="fas fa-comments"></i> Room Name:</h3>
+            <h2 id="room-name"></h2>
+            <h3><i class="fas fa-users"></i> Users</h3>
+            <ul id="users" style="margin: 10px;justify-content: center  ;"></ul>
+        </div>
+        
+            
+          
+        
+    </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="logo">
+                    <i class="fab fa-facebook-messenger"></i>
+                    <h3>Messenger</h3>
+                </div>
+                
+                <p id = "your-name">YourName</p>
+                <button class="leave-room" id="leave-btn">Rời phòng</button>
+            </div>
+           
+            <div class="chat-section">
+                <div class="main-wrappper">
+                    <div class="chat-content">
+                        <div class="message">
+                           
+                            <div class="message-row other-message">
+                               
+                            </div>
+                            <div class="message-row you-message">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                    <form class="msg-tex">
+                        <input type="text" name="msg" id="msg"
+                        placeholder="Type Message Here" autocomplete="off" required >
+                        <button id ="btn-send">
+                            <i class="fas fa-paper-plane" style="color: white;">Send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="app.js"></script>
+</body>
+</html>
